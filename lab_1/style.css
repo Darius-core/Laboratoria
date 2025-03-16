@@ -1,0 +1,104 @@
+header, nav, main, footer
+{
+    display: block;
+    width: 1078px;
+    
+}
+
+body
+{
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0px;
+    text-align: center;
+}
+
+header{
+    color: #000000;
+    background-color: #7fffd4;
+    width: 1078px;
+    height: 100px;
+
+    position: relative;
+}
+
+nav
+{
+    color: #006400;
+    background-color: #5f9ea0;
+    width: 1078px;
+    height: 40px;
+}
+
+main
+{
+    background-color: #40e0d0;
+    width: 1078px;
+    height: auto;
+    overflow: hidden;
+}
+
+footer
+{
+    background-color: #7fffd4a4;
+    clear: both;
+    
+}
+
+#col-left{
+    background-color: #006acc;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+#col-center{
+    background-color: #6900cc;
+    width: 200px;
+    height: auto;
+    float: left;
+}
+
+#container{
+    width: 1078px;
+    height: auto;
+
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+#logo{
+    width: 200px;
+    height: 40px;
+
+    border: 2px dotted #731980;
+    
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#logo img{
+    max-height: 80px;
+}
+
+table{
+    
+    border: 2px solid #383838;
+}
+
+tr.head{
+    background-color: #777;
+}
+
+tr.row:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+tr.row:nth-child(even) {
+    background-color: rosybrown;
+}
