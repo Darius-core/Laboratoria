@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;
+    charset=UTF-8" />
+    <title>Stronka do javy</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <H2> Zabawa dodawanie i usuwanie elementów tablicy</H2>
+        <p>Oryginalna tablica days:</p>
+        <div id="days"> </div>
+        
+        <p>któreś elementy tablicy days:</p>
+        <div id="container"> </div>
+        <div id="container2"> </div>
+        
+        
+        <p>pełna tablica days:</p>
+        <div id="contener1"> </div>
+        <div id="contener2"> </div>
+        
+        
+        <button onclick="pokaz()">Pokaż dzień</button>
+        
+        
+        <script>
+            const days=['Pn.','Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.', 'Ndz.'];
+            
+            function pokaz() {
+                document.getElementById("days").innerHTML=days;
+                
+                days[7] = "Nowy Pn";
+                days[days.length] = "Nowy wtorek";
+                document.getElementById("container").innerte=""+days[2]+", "+days[7];
+                document.getElementById("container2").innerHTML= days[days.length-1];
+                
+                days.push("Nowe 8", "Nowe 9", "Nowe 11");
+                days.unshift("Nowe 12", "Nowe 13");
+                document.getElementById("contener1").innerHTML=days;
+                
+                days.pop();
+                days.shift();
+                document.getElementById("contener2").innerHTML=days;
+            }
+        </script>
+    
+    </section>
+        
+    <section>
+        <H2> Zabawa metodą write</H2>
+        <script>
+            const tablica=["Foka","Kot","Świnia","Pies","Morświn"];
+            
+            document.write('<p>Pierwszy element tablicy to <strong>');
+            document.write(tablica[0]+'</strong> </p>');
+            
+            document.write('<p>Ostatni element tablicy to <strong>');
+            document.write(tablica[tablica.length-1]+'</strong> </p>');
+            
+            tablica.unshift("Krowa");
+            document.write('<p>Pierwszy element tablicy po dodaniu to <strong>');
+            document.write(tablica[0]+'</strong> </p>');
+        </script> 
+    </section>
+
+    <section>
+        <H2> Zabawa DOM</H2>
+        <script>
+           const formscounter = document.forms.length;
+           document.write('<p> Liczba elementów na stronie to <strong>');
+           document.write(formscounter+' </strong></p>');
+        </script> 
+    </section>
+    <footer>Strona z javą</footer>
+</body>
+</html>
