@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quize</title>
+    <script>
+        let score = 0;
+        let q = 0;
+        
+        const question = [
+            ['1. Ile kopyt ma krowa morska?', '0', '2', '4', '0'],
+            ['2. Czy rekiny to ssaki?', 'Nie', '']
+        ]; 
+
+        function testQuestion(question){
+            answer = document.getElementById("odp")
+            if(answer == question[1]){
+                score++;
+            }
+            
+            
+        }
+
+        
+        function wypisz() {
+            let message = 'liczba punktów: ' + score;
+            message += ' z ' + question.length;
+            message += '.';
+            
+            document.getElementById("punkty").innerHTML = message;
+
+            document.getElementById("pytanie").innerHTML = question[q][0];
+            
+            document.getElementById("odp_1").innerText = question[q][2];
+            document.getElementById("odp_2").innerText = question[q][3];
+            document.getElementById("odp_3").innerText = question[q][4];
+
+            
+        }
+        
+        
+        
+        for(i=0; i<question.length; i++) {
+
+            wypisz();
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz z czegoś</h1>
+    <forms>
+        <div id="punkty"></div>
+        <div id="pytanie"></div>
+        
+        <input type="radio" id="odp_1"></input>
+        <input type="radio" id="odp_2"></input>
+        <input type="radio" id="odp_3"></input>
+       
+        
+
+        <button onclick="wypisz();" value="">Następne pytanie</button>
+    </forms>
+
+</body>
+</html>
