@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Laboratoria/lab_9prod/build/static/css/main.f855e6bc.css",
+    "main.js": "/Laboratoria/lab_9prod/build/static/js/main.ba328451.js",
+    "static/js/453.2c6d9ac3.chunk.js": "/Laboratoria/lab_9prod/build/static/js/453.2c6d9ac3.chunk.js",
+    "index.html": "/Laboratoria/lab_9prod/build/index.html",
+    "main.f855e6bc.css.map": "/Laboratoria/lab_9prod/build/static/css/main.f855e6bc.css.map",
+    "main.ba328451.js.map": "/Laboratoria/lab_9prod/build/static/js/main.ba328451.js.map",
+    "453.2c6d9ac3.chunk.js.map": "/Laboratoria/lab_9prod/build/static/js/453.2c6d9ac3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.ba328451.js"
+  ]
+}
