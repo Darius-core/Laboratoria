@@ -9,7 +9,7 @@ function PlayerStatus({player}){
             <p>Poziom: {player.level} </p>
             <p>Życie: {player.hp} / {player.maxHP} </p>
             <p>: {player.mp} / {player.maxMP} </p>
-            <p>Atak: {player.atack} </p>
+            <p>Atak: {player.attack} </p>
         </div>
     )
 }

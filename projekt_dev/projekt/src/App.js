@@ -8,16 +8,7 @@ import PlayerStatus from './PlayerStatus';
 
 function App() {
 
-  const [player, setPlayer] = useState({
-        name: "",
-        level: 1,
-        exp: 0,
-        hp: 100,
-        maxHP: 100,
-        mp: 50,
-        maxMP: 50,
-        atack: 5,
-    });
+  const [player, setPlayer] = useState({});
 
 
 
