@@ -1,16 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
-function PlayerStatus({player}){
+export default function PlayerStatus({character}){
     
 
     return(
         <div>
-            <h4>{player.name}</h4>
-            <p>Poziom: {player.level} </p>
-            <p>Życie: {player.hp} / {player.maxHP} </p>
-            <p>: {player.mp} / {player.maxMP} </p>
-            <p>Atak: {player.attack} </p>
+            <h4>{character.name}</h4>
+            <p>Poziom: {character.level} </p>
+            <p>Życie: {character.hp} / {character.maxHP} </p>
+            <p>Magia: {character.mp} / {character.maxMP} </p>
+            <p>Atak: {character.attack} </p>
+            <p>Obrona: {character.defense} </p>
         </div>
     )
 }
-export default PlayerStatus
+
+export function CharacterView({character}){
+    
+    return(
+        <div>
+            <h4>{character.name}</h4>
+            <p>Poziom:  {character.level} </p>
+            <p>Życie:  {character.maxHP} </p>
+            <p>Magia:  {character.maxMP} </p>
+            <p>Atak: {character.attack} </p>
+            <p>Obrona: {character.defense} </p>
+            <p>Unik: {character.dodge} </p>
+        </div>
+    )
+}
+
