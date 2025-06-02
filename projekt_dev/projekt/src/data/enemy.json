@@ -1,0 +1,35 @@
+{
+    "orka": {
+        "name": "Orka",
+        "level": 2,
+        "hp": 110,
+        "maxHP": 110,
+        "mp": 30,
+        "maxMP": 30,
+        "attack": 6,
+        "defense": 6,
+        "dodge": 2
+    },
+    "lis": {
+        "name": "Lis Polarny",
+        "level": 1,
+        "hp": 70,
+        "maxHP": 70,
+        "mp": 50,
+        "maxMP": 50,
+        "attack": 4,
+        "defense": 2,
+        "dodge": 7
+    },
+    "niedziwiedz": {
+        "name": "Niedziwiedz Polarny",
+        "level": 4,
+        "hp": 170,
+        "maxHP": 170,
+        "mp": 40,
+        "maxMP": 40,
+        "attack": 8,
+        "defense": 14,
+        "dodge": 2
+    }
+}
