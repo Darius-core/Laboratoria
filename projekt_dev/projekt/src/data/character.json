@@ -1,0 +1,32 @@
+{
+    "wojownik": {
+        "name": "Wojownik",
+        "level": 1,
+        "exp": 0,
+        "hp": 100,
+        "maxHP": 100,
+        "mp": 50,
+        "maxMP": 50,
+        "attack": 5
+    },
+    "mag": {
+        "name": "Mag",
+        "level": 1,
+        "exp": 0,
+        "hp": 70,
+        "maxHP": 70,
+        "mp": 100,
+        "maxMP": 100,
+        "attack": 8
+    },
+    "tarczownik": {
+        "name": "Tarczownik",
+        "level": 1,
+        "exp": 0,
+        "hp": 150,
+        "maxHP": 150,
+        "mp": 40,
+        "maxMP": 40,
+        "attack": 7
+    }
+}
