@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import classesData from "./data/character.json"
-import {CharacterView} from "./PlayerStatus.jsx";
+import {CharacterView} from "./Status.jsx";
 
 function CharacterSelect ({ onSelect }){
     const [classes, setClasses] = useState({});
