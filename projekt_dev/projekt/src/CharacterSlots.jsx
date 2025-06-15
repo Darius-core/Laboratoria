@@ -70,7 +70,7 @@ function CharacterSlots({onSelectCharacter}){
                                 <p>Poziom: {slot.level}</p>
                                 <p>HP: {slot.hp} / {slot.maxHP}</p>
                                 <button onClick={() => onSelectCharacter({...slot, slotId: `slot${index+1}` })} >Wczytaj</button>
-                                <buton onClick={() => handleDeleteSlot(index)} style={{marginTop: '10px', color: 'red'}} >Usuń</buton>
+                                <button onClick={() => handleDeleteSlot(index)} style={{marginTop: '10px', color: 'red'}} >Usuń</button>
                             </>
                         ) : (
                             <>
