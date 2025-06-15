@@ -129,7 +129,7 @@ function BattleSys({player, setPlayer, onBattleEnd}){
           <div style={{marginTop: "20px", width: "320px", position: "fixed", right: "5px", bottom:"5px"}}>
             <h4>Historia Walki:</h4>
             <div style={{height: "100px", overflow: "auto"}}>
-              <ul style={{"list-style": "square "}}>
+              <ul style={{listStyle: "square "}}>
                 {log.map((entry, index) => (
                   <li key={index}>{ entry }</li>
                 ))}
