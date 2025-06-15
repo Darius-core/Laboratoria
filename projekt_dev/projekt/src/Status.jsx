@@ -8,6 +8,7 @@ export default function PlayerStatus({character}){
             <h3>Gracz: </h3>
             <h5>{character.name}</h5>
             <p>Poziom: {character.level} </p>
+            <p>Exp: {character.exp} / {character.expToNextLevel} </p>
             <p>Życie: {character.hp} / {character.maxHP} </p>
             <p>Magia: {character.mp} / {character.maxMP} </p>
             <p>Atak: {character.attack} </p>
