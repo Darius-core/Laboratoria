@@ -8,7 +8,8 @@
         "maxMP": 30,
         "attack": 6,
         "defense": 6,
-        "dodge": 2
+        "dodge": 2,
+        "exp": 100
     },
     "lis": {
         "name": "Lis Polarny",
@@ -19,10 +20,11 @@
         "maxMP": 50,
         "attack": 4,
         "defense": 2,
-        "dodge": 7
+        "dodge": 7,
+        "exp": 70
     },
     "niedziwiedz": {
-        "name": "Niedziwiedz Polarny",
+        "name": "Niedźwiedź Polarny",
         "level": 4,
         "hp": 170,
         "maxHP": 170,
@@ -30,6 +32,152 @@
         "maxMP": 40,
         "attack": 8,
         "defense": 14,
-        "dodge": 2
+        "dodge": 2,
+        "exp": 150
+    },
+    "wilkolak": {
+        "name": "Wilkołak",
+        "level": 5,
+        "hp": 200,
+        "maxHP": 200,
+        "mp": 30,
+        "maxMP": 30,
+        "attack": 12,
+        "defense": 8,
+        "dodge": 5,
+        "exp": 180
+    },
+    "szaman_lodu": {
+        "name": "Szaman Lodu",
+        "level": 3,
+        "hp": 90,
+        "maxHP": 90,
+        "mp": 100,
+        "maxMP": 100,
+        "attack": 5,
+        "defense": 5,
+        "dodge": 4,
+        "exp": 120
+    },
+    "wilk": {
+        "name": "Drapieżny Wilk",
+        "level": 2,
+        "hp": 80,
+        "maxHP": 80,
+        "mp": 20,
+        "maxMP": 20,
+        "attack": 7,
+        "defense": 3,
+        "dodge": 6,
+        "exp": 90
+    },
+    "duch_lasu": {
+        "name": "Duch Lasu",
+        "level": 6,
+        "hp": 130,
+        "maxHP": 130,
+        "mp": 200,
+        "maxMP": 200,
+        "attack": 10,
+        "defense": 12,
+        "dodge": 10,
+        "exp": 220
+    },
+    "kryształowy_golem": {
+        "name": "Kryształowy Golem",
+        "level": 7,
+        "hp": 300,
+        "maxHP": 300,
+        "mp": 10,
+        "maxMP": 10,
+        "attack": 14,
+        "defense": 18,
+        "dodge": 1,
+        "exp": 300
+    },
+    "wilczek": {
+        "name": "Młody Wilczek",
+        "level": 1,
+        "hp": 50,
+        "maxHP": 50,
+        "mp": 10,
+        "maxMP": 10,
+        "attack": 3,
+        "defense": 1,
+        "dodge": 8,
+        "exp": 50
+    },
+    "kruk": {
+        "name": "Złowieszczy Kruk",
+        "level": 2,
+        "hp": 60,
+        "maxHP": 60,
+        "mp": 20,
+        "maxMP": 20,
+        "attack": 5,
+        "defense": 3,
+        "dodge": 9,
+        "exp": 80
+    },
+    "sniezny_pajak": {
+        "name": "Śnieżny Pająk",
+        "level": 2,
+        "hp": 85,
+        "maxHP": 85,
+        "mp": 25,
+        "maxMP": 25,
+        "attack": 6,
+        "defense": 4,
+        "dodge": 5,
+        "exp": 95
+    },
+    "dziki_krolik": {
+        "name": "Dziki Królik",
+        "level": 1,
+        "hp": 40,
+        "maxHP": 40,
+        "mp": 15,
+        "maxMP": 15,
+        "attack": 2,
+        "defense": 2,
+        "dodge": 10,
+        "exp": 45
+    },
+    "goblin_zlodziej": {
+        "name": "Goblin Złodziej",
+        "level": 3,
+        "hp": 90,
+        "maxHP": 90,
+        "mp": 20,
+        "maxMP": 20,
+        "attack": 7,
+        "defense": 5,
+        "dodge": 6,
+        "exp": 110
+    },
+    "nietoperz_lodowy": {
+        "name": "Nietoperz Lodowy",
+        "level": 2,
+        "hp": 65,
+        "maxHP": 65,
+        "mp": 10,
+        "maxMP": 10,
+        "attack": 4,
+        "defense": 2,
+        "dodge": 10,
+        "exp": 85
+    },
+    "skryty_ronin": {
+        "name": "Skryty Ronin",
+        "level": 3,
+        "hp": 100,
+        "maxHP": 100,
+        "mp": 30,
+        "maxMP": 30,
+        "attack": 8,
+        "defense": 4,
+        "dodge": 4,
+        "exp": 120
     }
+
 }
