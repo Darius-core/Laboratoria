@@ -12,7 +12,7 @@ function CharacterSelect ({ onSelect }){
     return(
         <div>
             <h3>Wybierz postać: </h3>
-            <div style={{display: "flex", "justify-content": "space-evenly" }}>
+            <div style={{display: "flex", justifyContent: "space-evenly" }}>
                 {Object.entries(classes).map(([key, charData]) => (
                     <div style={{width: "150px", border: "solid 3px gray" }}> 
                         <CharacterView character={charData}/> 
