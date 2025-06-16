@@ -124,6 +124,8 @@ function BattleSys({player, setPlayer, onBattleEnd}){
                 if(enemy?.hp === 0){
                     const expGain = enemy.exp || 50;
                     const {updatePlayer, logMessage} = gainExp(player, expGain);
+                    updatePlayer.hp = updatePlayer.maxHP;
+                    updatePlayer.mp = updatePlayer.maxMP;
                     const uid = auth.currentUser?.uid;
                     if(uid && player.slotId){
                         console.log("Zapisuję postać do slota:", player.slotId, updatePlayer);
