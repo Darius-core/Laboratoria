@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Laboratoria/projekt_prod/build/static/css/main.f855e6bc.css",
-    "main.js": "/Laboratoria/projekt_prod/build/static/js/main.8fb49acf.js",
+    "main.js": "/Laboratoria/projekt_prod/build/static/js/main.74ee67f1.js",
     "static/js/453.eeab4c9c.chunk.js": "/Laboratoria/projekt_prod/build/static/js/453.eeab4c9c.chunk.js",
     "index.html": "/Laboratoria/projekt_prod/build/index.html",
     "main.f855e6bc.css.map": "/Laboratoria/projekt_prod/build/static/css/main.f855e6bc.css.map",
-    "main.8fb49acf.js.map": "/Laboratoria/projekt_prod/build/static/js/main.8fb49acf.js.map",
+    "main.74ee67f1.js.map": "/Laboratoria/projekt_prod/build/static/js/main.74ee67f1.js.map",
     "453.eeab4c9c.chunk.js.map": "/Laboratoria/projekt_prod/build/static/js/453.eeab4c9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.8fb49acf.js"
+    "static/js/main.74ee67f1.js"
   ]
 }
