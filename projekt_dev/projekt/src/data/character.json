@@ -10,7 +10,16 @@
         "maxMP": 50,
         "attack": 5,
         "defense": 5,
-        "dodge": 7
+        "dodge": 7,
+        "specialAttacks": [
+            {
+            "name": "Przebicie",
+            "cost": 15,
+            "multiplier": 2,
+            "ignoreDefensePercent": 50,
+            "description": "Mocny atak ignorujący połowę obrony przeciwnika"
+            }
+        ]
     },
     "mag": {
         "name": "Mag",
@@ -23,7 +32,16 @@
         "maxMP": 100,
         "attack": 8,
         "defense": 3,
-        "dodge": 5
+        "dodge": 5,
+        "specialAttacks": [
+            {
+            "name": "Lodowy pocisk",
+            "cost": 20,
+            "multiplier": 2.3,
+            "ignoreDefensePercent": 40,
+            "description": "Lodowy sopel, który przeszywa i zadaje spore obrazenia "
+            }
+        ]
     },
     "tarczownik": {
         "name": "Tarczownik",
@@ -36,6 +54,15 @@
         "maxMP": 40,
         "attack": 7,
         "defense": 10,
-        "dodge": 2
+        "dodge": 2,
+        "specialAttacks": [
+            {
+            "name": "Ciezki atak",
+            "cost": 20,
+            "multiplier": 2.5,
+            "ignoreDefensePercent": 20,
+            "description": "Ciezki atak, zadaje duże obrażenia"
+            }
+        ]
     }
 }

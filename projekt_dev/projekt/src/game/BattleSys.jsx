@@ -4,6 +4,7 @@ import enemiesData from '../data/enemy.json';
 import {doc, setDoc} from 'firebase/firestore';
 import {db, auth} from '../firebase.js';
 
+// ------------------------------ sposób dawania expa
 const gainExp = (player, expAmount) => {
     let updatePlayer = { ...player};
     updatePlayer.exp += expAmount;
@@ -35,9 +36,8 @@ function BattleSys({player, setPlayer, onBattleEnd}){
     // ------------------------------ Losowanie przeciwnika
     useEffect(() =>{
         
-        const enemyKeys = Object.keys(enemiesData);
-        const randomKey = enemyKeys[Math.floor(Math.random()*enemyKeys.length)];
-        const selectedEnemy = enemiesData[randomKey];
+        const possibleEnemies = Object.values(enemiesData).filter(e => e.level <= player.level+1);
+        const selectedEnemy = possibleEnemies[Math.floor(Math.random() * possibleEnemies.length)];
         setEnemy({ ...selectedEnemy });
         
     }, []);
@@ -78,9 +78,46 @@ function BattleSys({player, setPlayer, onBattleEnd}){
         setLog(prev => [...prev, ...logEntry]);
     };
 
-    const isBattleOver = enemy?.hp === 0 || player?.hp === 0;
+    // ------------------------------ Ataki specjalne
+    const handleSpecialAttack = (special) => {
+        if (!enemy || !player || player.mp < special.cost) return;
+
+        const logEntry = [];
+
+        const enemyDodge = Math.random() < enemy.dodge / 100;
+        let newEnemyHP = enemy.hp;
+
+        if (enemyDodge) {
+            logEntry.push(`${enemy.name} unika specjalnego ataku!`);
+        } else {
+            const effectiveDefense = enemy.defense * (1 - special.ignoreDefensePercent / 100);
+            const damage = Math.max(0, (player.attack * special.multiplier) - effectiveDefense);
+            newEnemyHP = Math.max(0, enemy.hp - damage);
+
+            logEntry.push(`${player.name} używa "${special.name}" i zadaje ${damage.toFixed(1)} obrażeń!`);
+        }
+
+        // Przeciwnik kontratakuje
+        let newPlayerHP = player.hp;
+        if (newEnemyHP > 0) {
+            const playerDodge = Math.random() < player.dodge / 100;
+            if (playerDodge) {
+            logEntry.push(`${player.name} unika kontrataku!`);
+            } else {
+            const damageToPlayer = Math.max(0, enemy.attack - player.defense);
+            newPlayerHP = Math.max(0, player.hp - damageToPlayer);
+            logEntry.push(`${enemy.name} zadaje ${damageToPlayer} obrażeń ${player.name}`);
+            }
+        }
+
+        setEnemy(prev => ({ ...prev, hp: newEnemyHP }));
+        setPlayer(prev => ({ ...prev, hp: newPlayerHP, mp: player.mp - special.cost }));
+        setLog(prev => [...prev, ...logEntry]);
+    };
 
     // ------------------------------ zakończenie walki i zapis do bazy
+    const isBattleOver = enemy?.hp === 0 || player?.hp === 0;
+
     useEffect(() => {
         if(isBattleOver){
             const processBattleEnd = async () => {
@@ -96,7 +133,10 @@ function BattleSys({player, setPlayer, onBattleEnd}){
                     setLog(prev => [...prev, ...logMessage]);
                 }
 
+                // odczekanie chwilę dla odczytu komunikatu
+                setTimeout(() => {
                 onBattleEnd(enemy?.hp === 0);
+                }, 2500);
             };
         
             processBattleEnd();
@@ -117,12 +157,24 @@ function BattleSys({player, setPlayer, onBattleEnd}){
           </div>
 
           {!isBattleOver && (
-            <button onClick={handleAttack} style={{marginTop: "20px"}} >Atakuj</button>
+            <div>
+                <button onClick={handleAttack} style={{marginTop: "20px"}} >Atakuj</button>
+                {player.specialAttacks && player.specialAttacks.map((special, index) => (
+                    <button key={index} 
+                        onClick={() => handleSpecialAttack(special)} 
+                        disabled={player.mp < special.cost || isBattleOver}
+                        style={{marginTop: '10px', display: "block"}}
+                        title={special.description}
+                    >
+                        {special.name} ({special.cost} MP)
+                    </button>
+                ))}
+            </div>
           )}
 
           {isBattleOver && ( 
             <div style={{marginTop: "20px", fontWeight: "bold"}} >
-              {enemy?.hp === 0 ? `Pokonałeś ${enemy.name}!` : `${player.name} został pokonany...`}
+              {enemy?.hp === 0 ? `Pokonałeś ${enemy.name}!  Zdobywasz ${enemy.exp} Exp.` : `${player.name} został pokonany...`}
             </div>
           )}
 
